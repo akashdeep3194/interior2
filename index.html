@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Interiors - Premium Home Decor & Furniture in Lucknow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary-color: #a3eaf1;
+            --secondary-color: #ec7dd4;
+            --accent-color: #81f086;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
+                        url('img.jpg') center/cover;
+            height: 700px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #6366f1, #ec4899);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: #354737;
+            animation: gradientMove 2s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .feature-card {
+            position: relative;
+            border: 2px solid transparent;
+            background: linear-gradient(#d9b99b, #d9b99b) padding-box,
+                        linear-gradient(45deg, #bcbde8, #f9bce8) border-box;
+            opacity: 0.5;
+        }
+
+        .feature-card:hover {
+            opacity: 0.5;
+            transform: translateY(-5px) scale(1.02) !important;
+            transition: all 4s ease !important;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .glow-button {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(45deg, #354737, #1888a7);
+            transition: all 0.3s ease;
+        }
+
+        .glow-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.6);
+        }
+
+        .glow-button::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+            transform: rotate(45deg);
+            animation: glowEffect 3s infinite;
+        }
+
+        @keyframes glowEffect {
+            0% { transform: rotate(45deg) translateX(-100%); }
+            100% { transform: rotate(45deg) translateX(100%); }
+        }
+      .beige-gradient {
+            background: linear-gradient(to bottom, #9c9c92, #ceceb8);
+        }
+        
+        .review-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .review-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Carousel Animation */
+        .carousel-container {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        .carousel-track {
+            display: flex;
+            width: fit-content;
+            animation: carousel 50s linear infinite;
+        }
+
+        @keyframes carousel {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
+
+        .review-card {
+            flex: 0 0 auto;
+        }
+
+        /* Ensure review cards maintain consistent width */
+        .review-card {
+            flex: 0 0 auto;
+        }
+        .quote-mark {
+            font-size: 4rem;
+            height: 40px;
+            line-height: 1;
+            color: rgba(99, 102, 241, 0.2);
+        }
+
+  </style>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white/50 backdrop-blur-sm shadow-lg fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-center items-center py-4">
+                <div class="text-4xl font-bold gradient-text text-center animate__animated animate__fadeIn">
+                    Galaxy Interiors
+                </div>
+            </div>
+            <div class="flex justify-center space-x-12 py-2">
+                <a href="#home" class="text-black-200 hover:text-primary-color transition-all hover:scale-130">Home</a>
+                <a href="#services" class="text-black-200 hover:text-primary-color transition-all hover:scale-130">Services</a>
+                <a href="#gallery" class="text-black-200 hover:text-primary-color transition-all hover:scale-130">Gallery</a>
+                <a href="#contact" class="text-black-200 hover:text-primary-color transition-all hover:scale-130">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section flex items-center justify-center">
+        <div class="text-center text-white animate__animated animate__fadeInUp">
+            <h1 class="text-6xl font-bold mb-6 floating">Transform Your Space</h1>
+            <p class="text-2xl mb-10">Premium Home Decor & Furniture Solutions in Lucknow</p>
+            <a href="#contact" class="glow-button text-white px-12 py-4 rounded-full text-lg font-semibold">
+                Contact Us +91 XXXXXXXXXX
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+   <section class="py-24 beige-gradient">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-20 gradient-text">Our Services</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="feature-card bg-white p-8 rounded-xl animate__animated animate__fadeInLeft">
+                    <img src="img1.jpg" alt="Wallpaper Designs" class="w-full h-56 object-cover rounded-lg mb-6">
+                    <h3 class="text-2xl font-bold mb-4 gradient-text">Premium Wallpapers</h3>
+                    <p class="text-gray-600">Explore our exclusive collection of designer wallpapers to elevate your walls.</p>
+                </div>
+                <div class="feature-card bg-white p-8 rounded-xl animate__animated animate__fadeInUp delay-100">
+                    <img src="img2.jpg" alt="Furniture" class="w-full h-56 object-cover rounded-lg mb-6">
+                    <h3 class="text-2xl font-bold mb-4 gradient-text">Luxury Furniture</h3>
+                    <p class="text-gray-600">Handcrafted furniture pieces that blend comfort with sophistication.</p>
+                </div>
+                <div class="feature-card bg-white p-8 rounded-xl animate__animated animate__fadeInRight delay-200">
+                    <img src="img3.jpeg" alt="Interior Design" class="w-full h-56 object-cover rounded-lg mb-6">
+                    <h3 class="text-2xl font-bold mb-4 gradient-text">Interior Design</h3>
+                    <p class="text-gray-600">Professional design services to create your dream living space.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- New Reviews Section -->
+  <section class="py-20 beige-gradient">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">What Our Clients Say</h2>
+            
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <!-- Review 1 -->
+                    <div class="review-card w-full md:w-[400px] p-8 rounded-xl mx-4 shadow-lg flex-shrink-0">
+                        <div class="quote-mark">"</div>
+                        <p class="text-gray-600 mb-6">Absolutely transformed our living space! The attention to detail and quality of work is exceptional. Highly recommended for anyone looking to upgrade their home.</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center">
+                                <span class="text-xl font-bold text-indigo-600">A</span>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-900">Amit Singh</h4>
+                                <div class="flex text-yellow-400">
+                                    ★★★★★
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="review-card w-full md:w-[400px] p-8 rounded-xl mx-4 shadow-lg flex-shrink-0">
+                        <div class="quote-mark">"</div>
+                        <p class="text-gray-600 mb-6">Professional team with excellent taste. They helped us select the perfect wallpaper and furniture pieces. Our home looks stunning now!</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center">
+                                <span class="text-xl font-bold text-pink-600">R</span>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-900">Riya Kapoor</h4>
+                                <div class="flex text-yellow-400">
+                                    ★★★★★
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="review-card w-full md:w-[400px] p-8 rounded-xl mx-4 shadow-lg flex-shrink-0">
+                        <div class="quote-mark">"</div>
+                        <p class="text-gray-600 mb-6">Outstanding service from start to finish. The team was very helpful in understanding our needs and delivering exactly what we wanted.</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
+                                <span class="text-xl font-bold text-green-600">M</span>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-900">Mohammed Khan</h4>
+                                <div class="flex text-yellow-400">
+                                    ★★★★★
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="review-card w-full md:w-[400px] p-8 rounded-xl mx-4 shadow-lg flex-shrink-0">
+                        <div class="quote-mark">"</div>
+                        <p class="text-gray-600 mb-6">The quality of their products and installation is unmatched. They transformed our bedroom into a luxury suite!</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center">
+                                <span class="text-xl font-bold text-purple-600">S</span>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-900">Sneha Gupta</h4>
+                                <div class="flex text-yellow-400">
+                                    ★★★★★
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!-- Review 1 -->
+                    <div class="review-card w-full md:w-[400px] p-8 rounded-xl mx-4 shadow-lg flex-shrink-0">
+                        <div class="quote-mark">"</div>
+                        <p class="text-gray-600 mb-6">Absolutely transformed our living space! The attention to detail and quality of work is exceptional. Highly recommended for anyone looking to upgrade their home.</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center">
+                                <span class="text-xl font-bold text-indigo-600">A</span>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-900">Amit Singh</h4>
+                                <div class="flex text-yellow-400">
+                                    ★★★★★
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="review-card w-full md:w-[400px] p-8 rounded-xl mx-4 shadow-lg flex-shrink-0">
+                        <div class="quote-mark">"</div>
+                        <p class="text-gray-600 mb-6">Professional team with excellent taste. They helped us select the perfect wallpaper and furniture pieces. Our home looks stunning now!</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center">
+                                <span class="text-xl font-bold text-pink-600">R</span>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-900">Riya Kapoor</h4>
+                                <div class="flex text-yellow-400">
+                                    ★★★★★
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="review-card w-full md:w-[400px] p-8 rounded-xl mx-4 shadow-lg flex-shrink-0">
+                        <div class="quote-mark">"</div>
+                        <p class="text-gray-600 mb-6">Outstanding service from start to finish. The team was very helpful in understanding our needs and delivering exactly what we wanted.</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
+                                <span class="text-xl font-bold text-green-600">M</span>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-900">Mohammed Khan</h4>
+                                <div class="flex text-yellow-400">
+                                    ★★★★★
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="review-card w-full md:w-[400px] p-8 rounded-xl mx-4 shadow-lg flex-shrink-0">
+                        <div class="quote-mark">"</div>
+                        <p class="text-gray-600 mb-6">The quality of their products and installation is unmatched. They transformed our bedroom into a luxury suite!</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center">
+                                <span class="text-xl font-bold text-purple-600">S</span>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-900">Sneha Gupta</h4>
+                                <div class="flex text-yellow-400">
+                                    ★★★★★
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review 1 -->
+                    <div class="review-card w-full md:w-[400px] p-8 rounded-xl mx-4 shadow-lg flex-shrink-0">
+                        <div class="quote-mark">"</div>
+                        <p class="text-gray-600 mb-6">Absolutely transformed our living space! The attention to detail and quality of work is exceptional. Highly recommended for anyone looking to upgrade their home.</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center">
+                                <span class="text-xl font-bold text-indigo-600">A</span>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-900">Amit Singh</h4>
+                                <div class="flex text-yellow-400">
+                                    ★★★★★
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="review-card w-full md:w-[400px] p-8 rounded-xl mx-4 shadow-lg flex-shrink-0">
+                        <div class="quote-mark">"</div>
+                        <p class="text-gray-600 mb-6">Professional team with excellent taste. They helped us select the perfect wallpaper and furniture pieces. Our home looks stunning now!</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center">
+                                <span class="text-xl font-bold text-pink-600">R</span>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-900">Riya Kapoor</h4>
+                                <div class="flex text-yellow-400">
+                                    ★★★★★
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="review-card w-full md:w-[400px] p-8 rounded-xl mx-4 shadow-lg flex-shrink-0">
+                        <div class="quote-mark">"</div>
+                        <p class="text-gray-600 mb-6">Outstanding service from start to finish. The team was very helpful in understanding our needs and delivering exactly what we wanted.</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
+                                <span class="text-xl font-bold text-green-600">M</span>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-900">Mohammed Khan</h4>
+                                <div class="flex text-yellow-400">
+                                    ★★★★★
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="review-card w-full md:w-[400px] p-8 rounded-xl mx-4 shadow-lg flex-shrink-0">
+                        <div class="quote-mark">"</div>
+                        <p class="text-gray-600 mb-6">The quality of their products and installation is unmatched. They transformed our bedroom into a luxury suite!</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center">
+                                <span class="text-xl font-bold text-purple-600">S</span>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-gray-900">Sneha Gupta</h4>
+                                <div class="flex text-yellow-400">
+                                    ★★★★★
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-24 beige-gradient">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Get in Touch</h2>
+            <div class="bg-white rounded-xl shadow-2xl p-10 animate__animated animate__fadeInUp">
+                <form 
+                id="contactForm" 
+                action="https://docs.google.com/forms/d/e/1FAIpQLSc77viUs3z2OMj8D4aolxE1POXJN0skwE-B30sJcc0ghFb-cA/formResponse" 
+                method="POST"
+                target="_blank"
+                class="space-y-6">
+                <div>
+                    <label class="block text-gray-700 mb-2 font-semibold">Name</label>
+                    <input 
+                        type="text" 
+                        name="entry.1298357448" 
+                        class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-indigo-500 transition-all" 
+                        required>
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2 font-semibold">Phone</label>
+                    <input 
+                        type="tel" 
+                        name="entry.1451343361" 
+                        class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-indigo-500 transition-all" 
+                        required>
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2 font-semibold">Message</label>
+                    <textarea 
+                        name="entry.1682762496" 
+                        class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-indigo-500 transition-all" 
+                        rows="4" 
+                        required></textarea>
+                </div>
+                <button type="submit" class="glow-button w-full text-white py-4 rounded-lg text-lg font-semibold">
+                    Send Message
+                </button>
+            </form>
+            </div>
+        </div>
+    </section>  
+
+    <!-- Footer -->
+    <footer class="py-20 bg-gradient-to-b from-yellow-50 to-emerald-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="animate__animated animate__fadeInLeft">
+                    <h3 class="text-2xl font-bold mb-6">Galaxy Interiors</h3>
+                    <p class="text-gray-500">Transforming spaces into beautiful homes since 2015.</p>
+                </div>
+                <div class="animate__animated animate__fadeInUp delay-100">
+                    <h3 class="text-2xl font-bold mb-6">Contact Us</h3>
+                    <p class="text-gray-500">Utrethia, Raibareli Rd<br>Lucknow, Uttar Pradesh 226002</p>
+                    <p class="text-gray-500 mt-4">Phone: +91 XXXXXXXXXX</p>
+                </div>
+                <div class="animate__animated animate__fadeInRight delay-200">
+                    <h3 class="text-2xl font-bold mb-6">Opening Hours</h3>
+                    <p class="text-gray-500">Monday - Saturday: 10:00 AM - 8:00 PM<br>Sunday: Closed</p>
+                </div>
+            </div>
+            <div class="border-t border-white/20 mt-12 pt-8 text-center">
+                <p class="text-gray-500">&copy; 2025 Galaxy Interiors. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+<!-- Static App Form Collection Script -->
+<script src="https://static.app/js/static-forms.js" type="text/javascript"></script>
+
+<script src="https://static.app/js/static.js" type="text/javascript"></script>
+</body>
+</html>
